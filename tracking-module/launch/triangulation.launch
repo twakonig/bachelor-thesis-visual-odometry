@@ -1,0 +1,17 @@
+<launch>
+
+ <node name="tag_tracker_node"
+        pkg="confusion"
+        type="tag_tracker_node"/>
+
+  <node name="feature_triangulation_node"
+        pkg="target_tracking"
+        type="feature_triangulation_node"
+        output="screen"/>
+
+  <node pkg="rosbag"
+        type="play"
+        name="player"
+        args="/home/theresa/2020_03_16_vi_tags_1.bag"/>
+
+</launch>
